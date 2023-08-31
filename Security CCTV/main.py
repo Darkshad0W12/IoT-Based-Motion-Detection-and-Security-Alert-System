@@ -45,17 +45,17 @@ def SendMail(ImgFileName):
 
     msg = MIMEMultipart()
     msg['Subject'] = 'Security alert !'
-    msg['From'] = 'anuraag.maity.fit.cse20@teamfuture.in'
-    msg['To'] = 'ayushchatterjee003@gmail.com'
-    UserName="anuraag.maity.fit.cse20@teamfuture.in"
-    UserPassword="ishreyona"
+    msg['From'] = '**********************'
+    msg['To'] = '*****************'
+    UserName="**************"
+    UserPassword="**************"
     text = MIMEText("Motion detected !")
     msg.attach(text)
     image = MIMEImage(img_data, name=os.path.basename(ImgFileName))
     msg.attach(image)
     s = smtplib.SMTP_SSL("smtp.gmail.com",465)
     s.login(UserName, UserPassword)
-    s.sendmail("anuraag.maity.fit.cse20@teamfuture.in","ayushchatterjee003@gmail.com", msg.as_string())
+    s.sendmail("*************","************", msg.as_string())
     s.quit()
                 
 while True:
